@@ -46,7 +46,7 @@ var { version } = await fetchLatestBaileysVersion()
 const conn = makeWASocket({
         logger: P({ level: 'silent' }),
         printQRInTerminal: false,
-        browser: Browsers.macOS("Chrome"),
+        browser: Browsers.macOS("Firefox"),
         syncFullHistory: true,
         auth: state,
         version
@@ -67,9 +67,25 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins installed successful ✅')
-console.log('WHITE Bot Connected Successful ✅')
+console.log('Bot connected to whatsapp ✅')
 
-let up = `HASHAN MD Connected Successful ✅\n\nPREFIX: ${prefix}`;
+let up = `*✅ HASHAN-MD Bot Successfully Installed!*
+
+🔮 HASHAN-MD is built to revolutionize your WhatsApp experience smarter, faster, and more powerful.
+
+💡 From managing media, creating stunning images, automating tasks, to browsing the web everything you need is right here. Unlock a whole new world of features!
+
+⚠️ Disclaimer: We are not responsible for any bans or damages caused to your WhatsApp account. Use at your own discretion.
+
+> *🧑🏻‍💻 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥𝗦 :*
+
+MAIN OWNER | HASHIYA TECH  
+
+> *🛡️ 𝗙𝗢𝗟𝗟𝗢𝗪 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 :*
+
+https://whatsapp.com/channel/0029Vb3EOfAKGGGQAsl6wI47
+
+> *©️  𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 HASHAN-MD*`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://files.catbox.moe/sn20tl.jpg` }, caption: up })
 
@@ -173,4 +189,4 @@ res.send("hey, bot started✅");
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);  
+}, 4000);
