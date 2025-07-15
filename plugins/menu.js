@@ -67,14 +67,8 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                     case '1': // DOWNLOAD MENU
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *📥 DOWNLOADER-MENU 📥* *❒⁠⁠⁠⁠* 
-*┋* *.FB*
-*┋* *.SONG*
-*┋* *.comming soon*
-*┋* *.comming soon*
-*┋* *.comming soon*
-*┋* *.comming soon*
-*┋* *.comming soon*
-*┋* *.comming soon*
+*┋* *.ANIME*
+*┋* *.ANIMEGIRL*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
@@ -83,12 +77,7 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                     case '2': // SEARCH MENU
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *🔎 SEARCH-MENU 🔍* *❒⁠⁠⁠⁠* 
-*┋* *.ANIME*
-*┋* *.ANIME2*
-*┋* *.IMG*
-*┋* *.comming soon*
-*┋* *.comming soon*
-*┋* *.comming soon*
+*┋* *.VV*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
@@ -98,8 +87,8 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *🧠 AI-MENU 🧠* *❒⁠⁠⁠⁠* 
 *┋* *.AI*
-*┋* *.comming soon*
-*┋* *.comming soon*
+*┋* *.OPENAI*
+*┋* *.DEEPSEEK*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
@@ -111,9 +100,11 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *┋* *.SETTINGS*
 *┋* *.OWNER*
 *┋* *.SYSTEM*
-*┋* *.UNBLOCK*
+*┋* *.BLOCK*
 *┋* *.SETPP*
 *┋* *.RESTART*
+*┋* *.VV*
+*┋* *.HACK*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
@@ -122,10 +113,7 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                     case '5': // GROUP MENU
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *👥 GROUP-MENU 👥* *❒⁠⁠⁠⁠* 
-*┋* *.REMOVE*
 *┋* *.DELETE*
-*┋* *.ADD*
-*┋* *.KICK*
 *┋* *.MUTE*
 *╰───────────────────❒*
 
@@ -148,9 +136,7 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                     case '7': // CONVERTER MENU
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *🎡 CONVERTER-MENU 🎡* *❒⁠⁠⁠⁠* 
-*┋* *.comming soon*
-*┋* *.comming soon*
-*┋* *.comming soon*
+*┋* *.S*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
@@ -159,13 +145,9 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                     case '8': // WALLPAPERS MENU
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *⛱️ RANDOM-MENU ⛱️* *❒⁠⁠⁠⁠* 
-*┋* *.ᴀɴɪᴍᴇ*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ1*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ2*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ3*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ4*
-*┋* *.ᴀɴɪᴍᴇɢɪʀʟ5*
+*┋* *.ANIME*
+*┋* *.ANIMEGIRL*
+*┋* *.COUPLEPP*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
@@ -174,7 +156,7 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                     case '9': // WALLPAPER MENU
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *🏜️ WALLPAPERS-MENU 🏜️* *❒⁠⁠⁠⁠* 
-*┋* *.ɪᴍɢ*
+*┋* *.IMG*
 *╰───────────────────❒*
 
 > ©POWERED BY HASHAN-MD
