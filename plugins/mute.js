@@ -1,8 +1,8 @@
-const config = require('../settings')
-const { lite, commands } = require('../lite')
+const config = require('../config')
+const { cmd, commands } = require('../command')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 
-lite({
+cmd({
     pattern: "mute",
     alias: ["groupmute"],
     react: "🔇",
