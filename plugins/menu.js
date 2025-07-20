@@ -3,11 +3,11 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 const os = require("os");
 const { runtime } = require('../lib/functions');
-const imageUrl = 'https://res.cloudinary.com/df2rnoijw/image/upload/v1752404824/shkqo3nbxkhhbyej2lxm.jpg';
+const imageUrl = 'https://res.cloudinary.com/df2rnoijw/image/upload/v1752984156/b65xvlmw9e1oc8hhjbfd.jpg';
 
 cmd({
     pattern: "menu",
-    react: "✅",
+    react: "✨️",
     alias: ["panel", "commands"],
     desc: "බොට් විධාන ලැයිස්තුව ලබා ගන්න",
     category: "main",
@@ -19,11 +19,11 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
         const selectionMessage = `
 *_HASHAN-MD COMMAND LIST ⚡_*
 
-> *NAME BOT : HASHAN-MD*
-> *VERSION : 1.0*
-> *PREFIX : [.]*
-> *OWNER : HASHIYA TECH*
-> *RAM : UNLIMITED*
+> *🔰 NAME BOT : HASHAN-MD*
+> *🔰 VERSION : 1.0*
+> *🔰 PREFIX : [.]*
+> *🔰 OWNER : HASHIYA TECH*
+> *🔰 RAM : UNLIMITED*
 
 
 ┌────────────────···▸*
