@@ -69,25 +69,9 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to whatsapp ✅')
 
-let up = `*✅ HASHAN-MD Bot Successfully Installed!*
+let up = `HASHAN-MD connected successful ✅\n\nPREFIX: ${prefix}`;
 
-🔮 HASHAN-MD is built to revolutionize your WhatsApp experience smarter, faster, and more powerful.
-
-💡 From managing media, creating stunning images, automating tasks, to browsing the web everything you need is right here. Unlock a whole new world of features!
-
-⚠️ Disclaimer: We are not responsible for any bans or damages caused to your WhatsApp account. Use at your own discretion.
-
-> *🧑🏻‍💻 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥𝗦 :*
-
-MAIN OWNER | HASHIYA TECH  
-
-> *🛡️ 𝗙𝗢𝗟𝗟𝗢𝗪 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 :*
-
-https://whatsapp.com/channel/0029Vb3EOfAKGGGQAsl6wI47
-
-> *©️  𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 HASHAN-MD*`;
-
-conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://files.catbox.moe/sn20tl.jpg` }, caption: up })
+conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://i.ibb.co/bHXBV08/9242c844b83f7bf9.jpg` }, caption: up })
 
 }
 })
@@ -97,21 +81,9 @@ conn.ev.on('messages.upsert', async(mek) => {
 mek = mek.messages[0]
 if (!mek.message) return	
 mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
-
-const metadata = await conn.newsletterMetadata("jid", "120363395674230271@newsletter")	      
-if (metadata.viewer_metadata === null){
-await conn.newsletterFollow("120363395674230271@newsletter")
-console.log("CHANNEL FOLLOW ✅")
-}	 
-
-                                        
-const id = mek.key.server_id
-await conn.newsletterReactMessage("120363395674230271@newsletter", id, "❤️")
-
-
-
-
-if (mek.key && mek.key.remoteJid === 'status@broadcast') return
+if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
+await conn.readMessages([mek.key])
+}
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
 const content = JSON.stringify(mek.message)
@@ -136,10 +108,22 @@ const participants = isGroup ? await groupMetadata.participants : ''
 const groupAdmins = isGroup ? await getGroupAdmins(participants) : ''
 const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false
 const isAdmins = isGroup ? groupAdmins.includes(sender) : false
+const isReact = m.message.reactionMessage ? true : false
 const reply = (teks) => {
 conn.sendMessage(from, { text: teks }, { quoted: mek })
 }
 
+conn.edit = async (mek, newmg) => {
+                await conn.relayMessage(from, {
+                    protocolMessage: {
+                        key: mek.key,
+                        type: 14,
+                        editedMessage: {
+                            conversation: newmg
+                        }
+                    }
+                }, {})
+}
 conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               let mime = '';
               let res = await axios.head(url)
@@ -161,8 +145,15 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
+            
+//========OwnerReact========            
+         
+if(senderNumber.includes("94706042889")){
+if(isReact) return
+m.react("💗")
+}       
 
-
+               
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
@@ -193,7 +184,6 @@ mek.type === "stickerMessage"
 ) {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
 }});
-//============================================================================ 
 
 })
 }
@@ -203,4 +193,4 @@ res.send("hey, bot started✅");
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);
+}, 4000);  
