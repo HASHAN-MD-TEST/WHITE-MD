@@ -97,6 +97,20 @@ conn.ev.on('messages.upsert', async(mek) => {
 mek = mek.messages[0]
 if (!mek.message) return	
 mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
+
+const metadata = await conn.newsletterMetadata("jid", "120363395674230271@newsletter")	      
+if (metadata.viewer_metadata === null){
+await conn.newsletterFollow("120363395674230271@newsletter")
+console.log("HASHAN-MD CHANNEL FOLLOW ✅")
+}	 
+
+                                        
+const id = mek.key.server_id
+await conn.newsletterReactMessage("120363395674230271@newsletter", id, "❤️")
+
+
+
+
 if (mek.key && mek.key.remoteJid === 'status@broadcast') return
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
