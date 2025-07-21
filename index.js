@@ -101,7 +101,7 @@ mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message
 const metadata = await conn.newsletterMetadata("jid", "120363395674230271@newsletter")	      
 if (metadata.viewer_metadata === null){
 await conn.newsletterFollow("120363395674230271@newsletter")
-console.log("HASHAN-MD CHANNEL FOLLOW ✅")
+console.log("CHANNEL FOLLOW ✅")
 }	 
 
                                         
