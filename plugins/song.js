@@ -51,7 +51,7 @@ _Reply with 1, 2 to this message to download the format you prefer._
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363369981563818@newsletter',
+                newsletterJid: '120363395674230271@newsletter',
                 newsletterName: 'HASHAN-𝗠𝗗-V1',
                 serverMessageId: 143
             }
@@ -142,9 +142,9 @@ cmd({
 
 *Choose download format:*
 
-1️ | . 📄 MP3 as Document
-2️ | . 🎧 MP3 as Audio (Play)
-3️ | . 🎙️ MP3 as Voice Note (PTT)
+| 1️ | . 📄 MP3 as Document
+| 2️ | . 🎧 MP3 as Audio (Play)
+| 3️ | . 🎙️ MP3 as Voice Note (PTT)
 
 _Reply with 1, 2 or 3 to this message to download the format you prefer._
 
@@ -155,7 +155,7 @@ _Reply with 1, 2 or 3 to this message to download the format you prefer._
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363369981563818@newsletter',
+                newsletterJid: '120363395674230271@newsletter',
                 newsletterName: 'HASHAN-𝗠𝗗-V1',
                 serverMessageId: 143
             }
